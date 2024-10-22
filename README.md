@@ -29,34 +29,57 @@ Create a directory named "MyLab" on the desktop.
 
 
 ## COMMAND AND OUTPUT
-mkdir %username%\Desktop\MyLab
-![alt text](<074931-1.png>)
 Change to the "MyLab" directory and create an empty text file named "MyFile.txt" inside it.
+```
+mkdir %userprofile%\Desktop\MyLab
+```
+![image](https://github.com/user-attachments/assets/51be50b9-009d-4a34-9e07-73e41332a414)
 
 
 ## COMMAND AND OUTPUT
-cd %username%\Desktop\MyLab
-![alt text](<74931.png>)
 List the contents of the "MyLab" directory.
+```
+cd %userprofile%\Desktop\MyLab
+```
+![image](https://github.com/user-attachments/assets/c573ec08-0f89-427e-a648-919d5fe8150a)
 
+![image](https://github.com/user-attachments/assets/239f273a-61ab-4e43-961e-6ebedc793e5d)
 
 ## COMMAND AND OUTPUT
-dir %username%\Desktop\MyLab
-![alt text](<075042.png>)
 Copy "MyFile.txt" to a new folder named "Backup" on the desktop.
+```
+dir %userprofile%\Desktop\MyLab
+```
+![image](https://github.com/user-attachments/assets/c77b2551-bffa-49d2-ab84-60e7d221b068)
 
 ## COMMAND AND OUTPUT
-copy %username%\Desktop\Backup1
-![alt text](<75152.png>)
-![alt text](<75449.png>)
 Move the "MyLab" directory to the "Documents" folder.
+```
+mkdir %userprofile%\Desktop\Backup
+
+copy MyFile.txt %userprofile%\Desktop\Backup
+```
+![image](https://github.com/user-attachments/assets/a0f80ef5-e8f6-4cbd-b96b-e5cce11e902c)
+
+![image](https://github.com/user-attachments/assets/08a33477-ac70-4c67-94cc-752c203ee715)
 
 
 ## COMMAND AND OUTPUT
-move Myfile.txt %userprofile%\Documents
-![alt text](<75735.png>)
+```
+mv Myfile.txt %userprofile%\Documents
+```
+![image](https://github.com/user-attachments/assets/0dd978e0-e0d6-4a93-a619-83d965a0bfd2)
+
+
 ## Exercise 2: Advanced Batch Scripting
 Create a batch script named "BackupScript.bat" that creates a backup of files with the ".docx" extension from the "Documents" folder to a new folder named "DocBackup" on the desktop.
+```
+@echo off
+mkdir %userprofile%\Desktop\DocBackup
+copy %userprofile%\Documents\*.docx %userprofile%\Desktop\DocBackup
+echo Backup completed successfully!
+```
+Modify the script to delete files with the ".docx" extension from the "Documents" folder after creating the backup.
 ```
 @echo off
 mkdir %userprofile%\Desktop\DocBackup
@@ -66,11 +89,9 @@ echo Backup and deletion completed successfully!
 ```
 
 ## OUTPUT
-![alt text](os-8-img.png)
-
-
-
+![image](https://github.com/user-attachments/assets/ddf657d3-b54a-44c7-8393-615d081e9043)
 
 # RESULT:
 The commands/batch files are executed successfully.
+
 
